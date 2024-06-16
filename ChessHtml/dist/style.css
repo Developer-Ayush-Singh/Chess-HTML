@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+	transition: 0.2s ease;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+#board{
+	outline: 4px solid black;
+}
+
+.box {
+	display: inline-flex;
+	width: 8vh;
+	height: 8vh;
+	border: 1px solid black;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+
+#blackkill p,
+#whitekill p {
+	font-size: 3em;
+	letter-spacing: -40px;
+	text-shadow: -1px -1px 0px black;
+}
+
+#blackkill,
+#whitekill {
+	width: 16vh;
+	height: 65vh;
+	color: goldenrod;
+}
+
+#blackkill {
+	color: darkgoldenrod;
+}
+
+.row {
+	margin-bottom: -4px;
+}
+
+.row:nth-child(odd) .box:nth-child(odd),
+.row:nth-child(even) .box:nth-child(even) {
+	background-color: darkslategrey;
+	filter: brightness(1.3);
+}
+
+.row:nth-child(odd) .box:nth-child(even),
+.row:nth-child(even) .box:nth-child(odd) {
+	background-color: #C2C2C2;
+	filter: brightness(1.3);
+}
+
+p.p {
+	font-size: 9.5vh;
+	color: goldenrod;
+	text-shadow: 1px 1px 1px black;
+}
+
+.black p {
+	color: darkgoldenrod;
+}
+
+#winner {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#winner p {
+	font-size: 3em;
+	color: whitesmoke;
+}
